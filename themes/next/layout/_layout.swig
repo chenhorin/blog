@@ -88,11 +88,11 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
-  {% include '_third-party/mob_share.swig' %}
 
-  #添加nest特效以及设置
+  <!--添加nest特效以及设置 --!>
   {% if theme.canvas_nest %}
-   <script type="text/javascript" color="#D3E2F8" opacity='0.6' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+   <script type="text/javascript" color="#E61A6B" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
  {% endif %}
+ {% include '_third-party/mob_share.swig' %}
 </body>
 </html>

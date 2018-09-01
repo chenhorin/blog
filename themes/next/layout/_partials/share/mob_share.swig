@@ -1,4 +1,3 @@
-<!--MOB SHARE BEGIN-->
 <div class="-hoofoo-share-title">分享到：</div>
 <div class="-hoofoo-share-buttons">
     <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
@@ -32,4 +31,3 @@
 </div>
 <div class="-mob-share-ui-bg"></div>
 <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey={{theme.mob_share.appkey}}"></script>
-<!--MOB SHARE END-->

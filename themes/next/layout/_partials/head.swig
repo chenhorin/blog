@@ -3,13 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="{{ theme.android_chrome_color }}">
 
-# 2.顶部条加载
 <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
-## 2.1 改颜色
 <style>
     .pace .pace-progress {
-        background: #ff009e; /*进度条颜色*/
+        background: #C0C0FA; /*进度条颜色*/
         height: 3px;
     }
     .pace .pace-progress-inner {
@@ -21,7 +19,6 @@
     }
 </style>
 
-# 3.文章加密服务
 <script>
     (function(){
         if('{{ page.password }}'){

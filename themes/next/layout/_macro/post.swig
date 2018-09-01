@@ -213,7 +213,6 @@
              </span>
           {% endif %}
 
-	  #以下部分为：字数统计、阅读时长插入代码
          <span class="post-time">
 	   &nbsp; | &nbsp;
            <span class="post-meta-item-icon">
@@ -233,7 +232,6 @@
            <span class="post-count">{{ min2read(post.content) }}(分)</span>
            
          </span>
-	#以上部分为：字数统计、阅读时长插入代码
 
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}
             <span class="post-meta-divider">|</span>
@@ -355,16 +353,31 @@
     {#####################}
     {### END POST BODY ###}
     {#####################}
+     <div>
+      {% if not is_index %}
+	<div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+      {% endif %}
+      </div>
+    <div>
+      {% if not is_index %}
+        {% include 'my-copyright.swig' %}
+      {% endif %}
+      </div>
 
     {% if theme.wechat_subscriber.enabled and not is_index %}
-	#添加文章结束标记
-        <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+	
+
       <div>
+      {% if not is_index %}
         {% include 'wechat-subscriber.swig' %}
+      {% endif %}
       </div>
     {% endif %}
 
+	
     {% if (theme.alipay or theme.wechatpay or theme.bitcoin) and not is_index %}
+     
+   
       <div>
         {% include 'reward.swig' %}
       </div>
@@ -380,7 +393,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i> {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -450,17 +463,6 @@
       {% if is_index and not isLast %}
         <div class="post-eof"></div>
       {% endif %}
-
-	#文章末尾追加版权信息
-	<div>
-	    <p id="div-border-left-red">
-	   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
-	    <span>
-	    <b>本文地址：</b><a href="{{ url_for(page.path) }}" title="{{ page.title }}">{{ page.permalink }}</a><br/><b>转载请注明出处，谢谢！</b>
-	    </span>
-	    </p>
-	</div>
-
     </footer>
   </div>
   {######################}
